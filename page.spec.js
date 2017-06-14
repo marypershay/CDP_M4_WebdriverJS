@@ -12,7 +12,7 @@ browser.get('http://www.ci1-cms.gb.moneysupermarket.com/car-insurance/').then(()
     return browser.findElement(page.emailInput).isDisplayed().then((present) => {
         return present;
     });
-}, 10000, 'The element was still present when it should have disappeared.').then(() => {
+}, 10000, 'The element does\'t find.').then(() => {
     return browser.findElement(page.emailInput).sendKeys('active@msm.com');
 }).then(() => {
     return browser.findElement(page.passwordInput).sendKeys('1234567');
